@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnReset"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Tipster" >
+
+    <TextView
+        android:id="@+id/txtLbl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="18dp"
+        android:text="Total Amount:" />
+
+    <EditText
+        android:id="@+id/txtAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtLbl1"
+        android:layout_alignBottom="@+id/txtLbl1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_toRightOf="@+id/txtLbl1"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAllCaps="false" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtLbl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLbl1"
+        android:layout_below="@+id/txtAmount"
+        android:layout_marginTop="25dp"
+        android:text="No. of people:" />
+
+    <EditText
+        android:id="@+id/txtPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtAmount"
+        android:layout_alignTop="@+id/txtLbl2"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtLbl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLbl2"
+        android:layout_below="@+id/txtPeople"
+        android:layout_marginTop="21dp"
+        android:text="Tip Percentage:" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLbl3"
+        android:layout_alignRight="@id/radioGroupTips"
+        android:layout_below="@+id/txtLbl3"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioTen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="10%" />
+
+        <RadioButton
+            android:id="@+id/radioFifteen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%" />
+
+        <RadioButton
+            android:id="@+id/radioOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/txtTipOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/radioGroupTips"
+        android:layout_toRightOf="@+id/radioGroupTips"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/txtLbl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroupTips"
+        android:layout_below="@+id/txtTipOther"
+        android:layout_marginTop="34dp"
+        android:text="@string/textLbl4" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLbl4"
+        android:layout_below="@+id/txtLbl4"
+        android:layout_marginTop="15dp"
+        android:text="@string/textLbl5" />
+
+    <TextView
+        android:id="@+id/txtLbl6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="14dp"
+        android:text="@string/textLbl6" />
+
+    <TextView
+        android:id="@+id/txtTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txtTotalToPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtLbl6"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txtTipPerPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtLbl6"
+        android:layout_alignBottom="@+id/txtLbl6"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroupTips"
+        android:layout_toRightOf="@+id/txtLbl3"
+        android:minHeight="32dp"
+        android:text="Reset"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnReset"
+        android:layout_alignBottom="@+id/btnReset"
+        android:layout_alignRight="@+id/txtTipOther"
+        android:layout_toRightOf="@+id/radioGroupTips"
+        android:minHeight="32dp"
+        android:minWidth="72dip"
+        android:text="Calculate"
+        android:textSize="14sp" />
+
+</RelativeLayout>
